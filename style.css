@@ -3,6 +3,7 @@
   margin: 0px;
 }
 
+
 header{
   display: flex;
   justify-content: center;
@@ -10,4 +11,14 @@ header{
 
 #navbarDropdown{
   color: #333;
+
+.caja{
+  background-color:#FFE6A7;
+}
+
+#center{
+  justify-content: center;
+}
+h3.color{
+  background-color:#5BBAAE;
 }
