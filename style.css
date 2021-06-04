@@ -2,3 +2,12 @@
   padding: 0px;
   margin: 0px;
 }
+
+header{
+  display: flex;
+  justify-content: center;
+}
+
+#navbarDropdown{
+  color: #333;
+}
