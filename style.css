@@ -38,3 +38,6 @@ h3.color{
   border-radius:150px;
   justify-content: center;
 }
+#carouselExampleCaptions{
+margin: auto;
+}
