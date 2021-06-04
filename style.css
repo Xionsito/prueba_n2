@@ -23,3 +23,18 @@ h3.color{
   background-color:#5BBAAE;
 }
 }
+.caja{
+  background-color:#FFE6A7;
+  justify-content: center;
+  margin: 10px;
+
+}
+#color1{
+  background-color:#9AC7A9;
+}
+.imgRedonda {
+  width:250px;
+  height:250px;
+  border-radius:150px;
+  justify-content: center;
+}
