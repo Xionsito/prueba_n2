@@ -10,6 +10,9 @@
 }
 #color1{
   background-color:#9AC7A9;
+  justify-content: center;
+  margin:10px;
+  padding-left:27px;
 }
 .imgRedonda {
   width:250px;
