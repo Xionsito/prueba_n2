@@ -1,6 +1,7 @@
 *{
   padding: 0px;
   margin: 0px;
+  
 }
 
 header{
@@ -11,6 +12,7 @@ header{
 #navbarDropdown{
   color: #333;
 }
+
 
 .carousel-item{
   height: 32em;
@@ -37,3 +39,9 @@ header{
   background-size: cover;
   opacity: 0.5;
 }
+
+
+#estilo{
+background-color: #CDD1A4;
+}
+
