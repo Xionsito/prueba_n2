@@ -11,6 +11,8 @@ header{
 
 #navbarDropdown{
   color: #333;
+  
+}
 
 .caja{
   background-color:#FFE6A7;
@@ -22,7 +24,7 @@ header{
 h3.color{
   background-color:#5BBAAE;
 }
-}
+
 .caja{
   background-color:#FFE6A7;
   justify-content: center;
