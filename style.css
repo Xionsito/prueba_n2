@@ -1,6 +1,7 @@
 *{
   padding: 0px;
   margin: 0px;
+  
 }
 
 
@@ -44,6 +45,7 @@ h3.color{
   justify-content: center;
 }
 
+
 .carousel-item{
   height: 32em;
   color: #fff;
@@ -69,3 +71,9 @@ h3.color{
   background-size: cover;
   opacity: 0.5;
 }
+
+
+#estilo{
+background-color: #CDD1A4;
+}
+
