@@ -2,3 +2,13 @@
   padding: 0px;
   margin: 0px;
 }
+.caja{
+  background-color:#FFE6A7;
+}
+
+#center{
+  justify-content: center;
+}
+h3.color{
+  background-color:#5BBAAE;
+}
