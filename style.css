@@ -40,8 +40,8 @@ h3.color{
 .imgRedonda {
   width:250px;
   height:250px;
-  border-radius:150px;
-  justify-content: center;
+  border-radius: 15px;
+    justify-content: center;
 }
 
 .carousel-item{
