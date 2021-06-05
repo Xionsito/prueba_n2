@@ -9,59 +9,114 @@
 	<link rel="shortcut icon" href="/prueba_1/img/car_26px.png" />
 </head>
 <body>
-	<div class="login-wrap">
-		<div class="login-html">
-			<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Iniciar Sesion</label>
-			<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registrarse</label>
-			<div class="login-form">
-				<div class="sign-in-htm">
-					<div class="group">
-						<label for="user" class="label">Correo</label>
-						<input id="user" type="text" class="input">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+	<form id="form"> 
+		<div class="login-wrap">
+			<div class="login-html" >
+				<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Iniciar Sesion</label>
+				<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registrarse</label>
+				<div class="login-form">
+					<div class="sign-in-htm">
+						<div class="group">
+							<label for="user" class="label">Correo</label>
+							<input id="user" type="text" class="input" name="user">
+						</div>
+						<div class="group">
+							<label for="pass" class="label">Contraseña</label>
+							<input id="pass" name="psw"type="password" class="input" data-type="password">
+						</div>
+						<div class="group">
+							<input id="check" type="checkbox" class="check" checked>
+							<label for="check"><span class="icon"></span> Mantener Sesion Iniciada</label>
+						</div>
+						<div class="group">
+							<a href="/index.html" class="">
+								<input type="submit" class="button btn" value="Iniciar Sesion">
+							</a>
+						</div>
+						<div class="hr"></div>
+						
 					</div>
-					<div class="group">
-						<label for="pass" class="label">Contraseña</label>
-						<input id="pass" type="password" class="input" data-type="password">
+					<div class="sign-up-htm">
+						<div class="group">
+							<label for="user" class="label">Email</label>
+							<input id="user" type="text" class="input" name="eemail">
+						</div>
+						<div class="group">
+							<label for="pass" class="label">Nombre</label>
+							<input id="pass" type="password" class="input" name="nombre11">
+						</div>
+						<div class="group">
+							<label for="pass" class="label">Contraseña</label>
+							<input id="pass" type="password" class="input" name="pswd"data-type="password">
+						</div>
+						<div class="group">
+							<a href="/index.html">
+								<input type="submit" class="button" value="Registrarse">
+							</a>
+						</div>
+						<div class="hr"></div>
+						
 					</div>
-					<div class="group">
-						<input id="check" type="checkbox" class="check" checked>
-						<label for="check"><span class="icon"></span> Mantener Sesion Iniciada</label>
-					</div>
-					<div class="group">
-						<a href="/index.html" class="">
-							<input type="submit" class="button btn" value="Iniciar Sesion">
-						</a>
-					</div>
-					<div class="hr"></div>
-					
-				</div>
-				<div class="sign-up-htm">
-					<div class="group">
-						<label for="user" class="label">Email</label>
-						<input id="user" type="text" class="input">
-					</div>
-					<div class="group">
-						<label for="pass" class="label">Nombre</label>
-						<input id="pass" type="password" class="input" data-type="password">
-					</div>
-					<div class="group">
-						<label for="pass" class="label">Contraseña</label>
-						<input id="pass" type="password" class="input" data-type="password">
-					</div>
-					<div class="group">
-						<label for="pass" class="label">Repetir Contraseña</label>
-						<input id="pass" type="text" class="input">
-					</div>
-					<div class="group">
-						<a href="/index.html">
-							<input type="submit" class="button" value="Registrarse">
-						</a>
-					</div>
-					<div class="hr"></div>
-					
 				</div>
 			</div>
 		</div>
-	</div>
+
+	</form>
+	<script>
+		$(document).ready(function(){
+			$("#form").validate({
+				rules:{
+					user:{
+						required: true,
+						email: true
+					},
+					psw: {
+						required: true,
+						minlength: 5
+					},
+					eemail:{
+						required: true,
+						email: true
+					},
+					nombre11:{
+						required: true,
+						minlength: 4
+					},
+					pswd:{
+						required: true,
+						minlength: 5
+					},
+	
+
+
+				},
+
+				messages:{
+					user:{
+						required: "Rellene este campo correctamente",
+						email: "Ingrese un emal valido"
+					},
+					psw: {
+						required: "Rellene este campo correctamente",
+						minlength: "Ingrese al menos 5 caracteres"
+					},
+					eemail:{
+						required: "Rellene este campo correctamente",
+						email: "Ingrese un email valido"
+					},
+					nombre11:{
+						required: "Rellene este campo correctamente",
+						minlength: "Ingrese a lo menos 4 caracteres"
+					},
+					pswd: {
+						required: "Rellene este campo correctamente",
+						minlength: "Ingrese minimo 5 caracteres para su contraseña"
+					}
+				}
+			});
+		});
+	</script>
 </body>
 </html>
