@@ -1,6 +1,8 @@
 *{
   padding: 0px;
   margin: 0px;
+  list-style: none;
+  text-decoration: none;
   
 }
 
@@ -77,3 +79,11 @@ h3.color{
 background-color: #CDD1A4;
 }
 
+
+#estiloS{
+  list-style-type: none;
+}
+
+a:link{
+  color: black;
+}
