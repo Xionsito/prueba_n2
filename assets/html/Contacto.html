@@ -11,6 +11,11 @@
 
 </head>
 <body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+  
     <div align="center">
 		<img alt="Guido" src="/prueba_1/img/GuidoCars3.png" width="250" height="250">
 	</div>
@@ -36,14 +41,16 @@
         <h3>Dejanos un mensaje y nos pondremos en contacto contigo</h3>
 
 
-          <form action="submeter-formulario.php" method="post">       
+          <form action="submeter-formulario.php" method="post" id="validacion">       
 
             
                 <p>
-                  <label for="nombre" class="colocar_nombre">Nombre
-                    <span class="obligatorio">*</span>
-                  </label>
-                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                  <div class="form-group">
+                    <label for="nombre" class="colocar_nombre">Nombre
+                      <span class="obligatorio">*</span>
+                    </label>
+                      <input type="text" name="nombre" id="nombre"  placeholder="Escribe tu nombre">
+                  </div>
                 </p>
               
                 <p>
@@ -69,7 +76,7 @@
                 <p>
                   <label for="mensaje" class="colocar_mensaje">Mensaje
                   </label>                     
-                  <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                  <textarea name="introducir_mensaje" class="texto_mensaje " id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
                   </p>   
                   <!-- AQUI TENGO QUE PONER EL LINK PARA QUE FUNCIONE ESTO -->                 
                   <scrip src="/prueba_1/assets/js/alerta.js"></scrip>
@@ -82,6 +89,57 @@
           </form>
     </div>  
   </div>
+
+
+  <script>
+    $(document).ready(function(){
+      $("#validacion").validate({
+        rules:{
+          nombre: {
+            required: true,
+            minlength: 4
+          },
+          introducir_email: {
+            required: true,
+            email: true
+          },
+          introducir_telefono:{
+            required: true,
+            digits: true
+          },
+          introducir_asunto: {
+            required: true,
+
+          },
+          introducir_mensaje:{
+            required: true,
+            minlength: 5
+          }
+        },
+        messages:{
+          nombre:{
+            required: "Rellene este campo correctamente",
+            minlength: "Minimo 4 caracteres"
+          },
+          introducir_email: {
+            required: "Rellene este campo correctamente",
+            enail: "Ingrese un email valido"
+          },
+          introducir_telefono: {
+            required: "Rellene este campo correctamente",
+            digits: "Solo numeros porfavor"
+          },
+          introducir_asunto: {
+            required: "Rellene este campo correctamente"
+          },
+          introducir_mensaje: {
+            required: "Rellene este campo correctamente",
+            minlength: "Como minimo 5 caracteres"
+          }
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>

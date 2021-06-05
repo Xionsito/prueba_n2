@@ -87,3 +87,7 @@ background-color: #CDD1A4;
 a:link{
   color: black;
 }
+.textarea1{
+  resize: none;
+}
+
