@@ -6,7 +6,6 @@
   
 }
 
-
 header{
   display: flex;
   justify-content: center;
@@ -16,6 +15,17 @@ header{
   color: #333;
   
 }
+
+html, body{
+  height: 100%;
+}
+
+body{
+  min-height: 100vh;
+
+  
+}
+
 
 .caja{
   background-color:#FFE6A7;
@@ -76,6 +86,7 @@ h3.color{
 
 #estilo{
 background-color: #CDD1A4;
+
 }
 
 
@@ -89,3 +100,4 @@ a:link{
 .textarea1{
   resize: none;
 }
+
