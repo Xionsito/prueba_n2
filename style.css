@@ -41,7 +41,13 @@ h3.color{
   width:250px;
   height:250px;
   border-radius: 15px;
-    justify-content: center;
+  justify-content: center;
+}
+.imgMecanico {
+  margin-top:50px;
+  width:300px;
+  height:300px;
+  justify-content: center;
 }
 
 .carousel-item{
@@ -72,3 +78,12 @@ h3.color{
 #estilo{
   background-color: #CDD1A4;
   }
+#colorMecanico{
+  background-color:#9AC7A9;
+}
+#color2{
+  background-color:#5BBAAE;
+  justify-content: center;
+  align-content: center;
+  padding-left:27px;
+}
